@@ -1,0 +1,122 @@
+---------------------Criar novas tabelas------------------------------------------------------------------
+-Abrir o xampp
+-Ativar o mysql
+-Abrir o shell
+-"mysql -u root -p"
+-Apertar Enter
+-"show databases" pra ver os banco de dados
+-"use nomeDoBanco;" pra entrar no banco de dados desejado
+-"show tables;" pra ver as tabelas do banco de dados
+-CREATE TABLE NOMEDATABELA(NOMEDACOLUNA TIPODACOLUNA);
+
+--------------------------Criar usuário do banco de dados-----------------------------------------------
+-Para ver os usuarios q existem digite:SELECT user,host FROM mysql.user;
+-Para criar um novo usuari:CREATE USER 'NomeDoUsuario'@'localhostOUip' IDENTIFIED BY 'senha';
+-Para dar os privilegios aos usuarios:GRANT ALL PRIVILEGES ON * . * TO 'NomeDoUsuario'@'localhostOUip';
+
+-------------------------Tabelas do banco do banco de dados----------------------------------------------
+usuario:usuario
+servidor:192.168.1.33
+senhaDosUsuarios:clinica
+insert into usuarioadministrador(NOME,SENHA) VALUES ('nome1','senha1');
+
+CREATE TABLE usuarioadministrador(
+numeroDeInscricao int AUTO_INCREMENT,
+NOME VARCHAR(255) NOT NULL,
+SENHA VARCHAR(255) NOT NULL,
+PRIMARY KEY (numeroDeInscricao));
+
+CREATE TABLE usuariosecretaria(
+numeroDeInscricao int AUTO_INCREMENT,
+NOME VARCHAR(255) NOT NULL,
+SENHA VARCHAR(255) NOT NULL,
+PRIMARY KEY (numeroDeInscricao));
+
+CREATE TABLE usuarioprofissional(
+numeroDeInscricao int AUTO_INCREMENT,
+ESPECIALIDADE VARCHAR(255) NOT NULL,
+NOME VARCHAR(255) NOT NULL,
+SENHA VARCHAR(255) NOT NULL,
+PRIMARY KEY (numeroDeInscricao));
+
+CREATE TABLE FICHADEPACIENTE(
+numeroDeInscricao int AUTO_INCREMENT,
+NOME VARCHAR(255) NOT NULL,
+TELEFONE VARCHAR(255) NOT NULL,
+CPF VARCHAR(255) NOT NULL,
+CIDADE VARCHAR(255) NOT NULL,
+BAIRRO VARCHAR(255) NOT NULL,
+RUA VARCHAR(255) NOT NULL,
+NUMERO VARCHAR(255) NOT NULL,
+PRIMARY KEY (numeroDeInscricao));
+
+CREATE TABLE MARCACAODECONSULTAS(
+ORDEM int AUTO_INCREMENT,
+NOME VARCHAR(255) NOT NULL,
+TELEFONE VARCHAR(255) NOT NULL,
+CPF VARCHAR(255) NOT NULL,
+ESPECIALIDADE VARCHAR(255) NOT NULL,
+PROFISSIONAL VARCHAR(255) NOT NULL,
+DIA VARCHAR(255) NOT NULL,
+HORARIO VARCHAR(255) NOT NULL,
+PRIMARY KEY (ORDEM));
+
+CREATE TABLE RELATORIOMEDICO(
+ORDEM int AUTO_INCREMENT,
+NOME VARCHAR(255) NOT NULL,
+TELEFONE VARCHAR(255) NOT NULL,
+CPF VARCHAR(255) NOT NULL,
+ESPECIALIDADE VARCHAR(255) NOT NULL,
+PROFISSIONAL VARCHAR(255) NOT NULL,
+DIA VARCHAR(255) NOT NULL,
+HORARIO VARCHAR(255) NOT NULL,
+RELATORIO VARCHAR(255),
+PRIMARY KEY (ORDEM));
+
+CREATE TABLE FolhaDePagamentoDoDia(
+ORDEM int AUTO_INCREMENT,
+NOME VARCHAR(255) NOT NULL,
+ESPECIALIDADE VARCHAR(255) NOT NULL,
+DIA VARCHAR(255) NOT NULL,
+VALOR VARCHAR(255) NOT NULL,
+PRIMARY KEY (ORDEM));
+
+CREATE TABLE FolhaDePagamentoDiario(
+ORDEM int AUTO_INCREMENT,
+DIA VARCHAR(255) NOT NULL,
+VALOR VARCHAR(255) NOT NULL,
+PRIMARY KEY (ORDEM));
+
+CREATE TABLE FolhaDePagamentoSemanalEMensal(
+ORDEM int AUTO_INCREMENT,
+ANO VARCHAR(255) NOT NULL,
+MES VARCHAR(255) NOT NULL,
+TOTALDOMES VARCHAR(255),
+SEMANA1 VARCHAR(255),
+SEMANA2 VARCHAR(255),
+SEMANA3 VARCHAR(255),
+SEMANA4 VARCHAR(255),
+PRIMARY KEY (ORDEM));
+
+insert into FolhaDePagamentoSemanalEMensal(ANO,MES)values('2021','MAIO');
+insert into FolhaDePagamentoSemanalEMensal(ANO,MES)values('2021','JUNHO');
+insert into FolhaDePagamentoSemanalEMensal(ANO,MES)values('2021','JULHO');
+
+
+insert into usuarioprofissional(NOME,SENHA)values('Item 2','oi');
+
+
+---------------------------------------------------------------------------------------------------------------atoa
+CREATE TABLE FolhaDePagamentoDoDia(
+ORDEM int AUTO_INCREMENT,
+NOME VARCHAR(255) NOT NULL,
+ESPECIALIDADE VARCHAR(255) NOT NULL,
+DIA DATE NOT NULL,
+VALOR VARCHAR(255) NOT NULL,
+PRIMARY KEY (ORDEM));
+
+CREATE TABLE FolhaDePagamentoDiario(
+ORDEM int AUTO_INCREMENT,
+DIA DATE NOT NULL,
+VALOR VARCHAR(255) NOT NULL,
+PRIMARY KEY (ORDEM));
