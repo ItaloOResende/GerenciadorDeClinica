@@ -4,7 +4,7 @@
 
 ![criar usuarios](https://user-images.githubusercontent.com/88686721/141026397-9497dd79-8137-4622-aeb1-b846fc533fd2.png)
 
-<li>Relatorio médico</li>
+<li>Relatório médico</li>
 
 ![relatorio medico](https://user-images.githubusercontent.com/88686721/141026692-a064e336-494b-4924-88dd-6f6e16cbcc65.png)
 
