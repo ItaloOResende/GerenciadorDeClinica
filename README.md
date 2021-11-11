@@ -1,4 +1,4 @@
-# GerenciadorDeClinica
+# Gerenciador De Clinica
 <h2>Programa de gerência de clínica</h2>
 <li>Cadastro de profissionais e pacientes</li>
 
