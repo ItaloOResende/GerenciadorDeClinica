@@ -1,5 +1,5 @@
 # GerenciadorDeClinica
-<h2>Programa de gerencia de clínica</h2>
+<h2>Programa de gerência de clínica</h2>
 <li>Cadastro de profissionais e pacientes</li>
 
 ![criar usuarios](https://user-images.githubusercontent.com/88686721/141026397-9497dd79-8137-4622-aeb1-b846fc533fd2.png)
